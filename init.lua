@@ -7,7 +7,7 @@ require("packer-config")
 -- nvim-tree
 require('tree-config')
 
--- lsp-config 
+-- lsp/cmp-config 
 require('lsp-config')
 
 -- nerdcommenter
