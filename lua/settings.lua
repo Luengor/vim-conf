@@ -9,6 +9,7 @@ syntax on
 
 set relativenumber
 set nu
+set signcolumn=yes
 
 set smarttab
 set smartindent
