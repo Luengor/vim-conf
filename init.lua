@@ -36,7 +36,7 @@ require'nvim-treesitter.configs'.setup {
 
 -- folds
 vim.cmd([[
-  set foldmethod=manual 
+  set foldmethod=syntax
   set foldtext=getline(v:foldstart).'...'.trim(getline(v:foldend))
   set fillchars=fold:\ 
   set foldnestmax=3

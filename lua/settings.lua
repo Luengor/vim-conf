@@ -23,9 +23,9 @@ vim.o.signcolumn = 'yes' -- keep 1 column for coc.vim  check
 -- tabs thing 
 vim.o.autoindent = true
 vim.o.smartindent = true
-vim.o.tabstop = 2 -- 1 tab = 2 spaces
-vim.o.shiftwidth = 2 -- indentation rule
-vim.o.expandtab = true -- expand tab to spaces
+vim.o.tabstop = 4
+vim.o.shiftwidth = 4
+vim.o.expandtab = true
 
 -- no perl
 vim.g.loaded_perl_provider = false
