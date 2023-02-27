@@ -41,12 +41,12 @@ local lsp_flags = {
 }
 
 -- Configure `vim.diagnostic`.
-vim.cmd([[au CursorHold * lua vim.diagnostic.open_float(0,{scope = "cursor"})]])
+-- vim.cmd([[au CursorHold * lua vim.diagnostic.open_float(0,{scope = "cursor"})]])
 vim.diagnostic.config({
-    virtual_text = false,
---    update_in_insert = true,    -- Don't need this with the floating window
+    virtual_text = true,
+    update_in_insert = true,    -- Don't need this with the floating window
     signs = true,
-    float = {border = "single"}
+    -- float = {border = "single"}
 })
 
 -- Configure servers
