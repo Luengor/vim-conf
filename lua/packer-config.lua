@@ -24,6 +24,9 @@ require('packer').startup(function(use)
     -- copilot
     use 'github/copilot.vim'
 
+    -- gitgutter
+    use 'airblade/vim-gitgutter'
+
     -- every language server
     use 'sheerun/vim-polyglot'
 
