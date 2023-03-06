@@ -36,18 +36,20 @@ require'nvim-treesitter.configs'.setup {
 
 -- folds
 vim.cmd([[
-  set foldmethod=manual
-  set foldtext=getline(v:foldstart).'...'.trim(getline(v:foldend))
+  set foldmethod=marker
+  set foldmarker='==>,<=='
+  " set foldtext=getline(v:foldstart).'code:)'.trim(getline(v:foldend))
+  set foldtext=getline(v:foldstart)
   set fillchars=fold:\ 
   set foldnestmax=3
   set foldminlines=1
 
-  " Remember folds
-  augroup remember_folds
-    autocmd!
-    autocmd BufWinLeave * mkview
-    autocmd BufWinEnter * silent! loadview
-  augroup END
+  " " Remember folds
+  " augroup remember_folds
+  "   autocmd!
+  "   autocmd BufWinLeave * mkview
+  "   autocmd BufWinEnter * silent! loadview
+  " augroup END
 ]])
 
 -- lualine

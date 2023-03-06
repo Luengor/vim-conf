@@ -28,7 +28,7 @@ vim.o.shiftwidth = 4
 vim.o.expandtab = true
 
 -- -- doxygen
--- vim.g.load_doxygen_syntax = true
+vim.g.load_doxygen_syntax = true
 
 -- no perl
 vim.g.loaded_perl_provider = false

@@ -3,6 +3,7 @@ local opts = { noremap=true, silent=true }
 local keymap = vim.keymap.set
 local lspconfig = require('lspconfig')
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
+local luasnip = require 'luasnip'
 
 keymap('n', '<space>e', vim.diagnostic.open_float, opts)
 keymap('n', '[d', vim.diagnostic.goto_prev, opts)
@@ -23,16 +24,16 @@ local on_attach = function(client, bufnr)
   keymap('n', 'K', vim.lsp.buf.hover, bufopts)
   keymap('n', 'gi', vim.lsp.buf.implementation, bufopts)
   keymap('n', '<C-k>', vim.lsp.buf.signature_help, bufopts)
-  keymap('n', '<space>wa', vim.lsp.buf.add_workspace_folder, bufopts)
-  keymap('n', '<space>wr', vim.lsp.buf.remove_workspace_folder, bufopts)
-  keymap('n', '<space>wl', function()
-    print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
-  end, bufopts)
+  --keymap('n', '<space>wa', vim.lsp.buf.add_workspace_folder, bufopts)
+  --keymap('n', '<space>wr', vim.lsp.buf.remove_workspace_folder, bufopts)
+  --keymap('n', '<space>wl', function()
+    --print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
+  --end, bufopts)
   keymap('n', '<space>D', vim.lsp.buf.type_definition, bufopts)
   keymap('n', '<space>rn', vim.lsp.buf.rename, bufopts)
   keymap('n', '<space>ca', vim.lsp.buf.code_action, bufopts)
   keymap('n', 'gr', vim.lsp.buf.references, bufopts)
-  keymap('n', '<space>f', function() vim.lsp.buf.format { async = true } end, bufopts)
+  --keymap('n', '<space>f', function() vim.lsp.buf.format { async = true } end, bufopts)
 end
 
 local lsp_flags = {
@@ -62,6 +63,11 @@ end
 -- nvim-cmp setup
 local cmp = require 'cmp'
 cmp.setup {
+  snippet = {
+    expand = function(args)
+      luasnip.lsp_expand(args.body)
+    end,
+  },
   mapping = cmp.mapping.preset.insert({
     ['<C-u>'] = cmp.mapping.scroll_docs(-4), -- Up
     ['<C-d>'] = cmp.mapping.scroll_docs(4), -- Down
@@ -74,6 +80,8 @@ cmp.setup {
     ['<Tab>'] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_next_item()
+      elseif luasnip.expand_or_jumpable() then
+        luasnip.expand_or_jump()
       else
         fallback()
       end
@@ -81,6 +89,8 @@ cmp.setup {
     ['<S-Tab>'] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_prev_item()
+      elseif luasnip.jumpable(-1) then
+        luasnip.jump(-1)
       else
         fallback()
       end
@@ -88,5 +98,7 @@ cmp.setup {
   }),
   sources = {
     { name = 'nvim_lsp' },
+    { name = 'luasnip' },
   },
 }
+
