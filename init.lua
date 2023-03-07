@@ -10,12 +10,12 @@ require('tree-config')
 -- lsp/cmp-config 
 require('lsp-config')
 
+-- telescope
+require('telescope-config')
+
 -- nerdcommenter
 vim.api.nvim_set_keymap('n', '++', '<Plug>NERDCommenterToggle', { noremap = false, silent = true })
 vim.api.nvim_set_keymap('v', '++', '<Plug>NERDCommenterToggle', { noremap = false, silent = true })
-
--- -- lspsaga
--- require('lspsaga-config')
 
 -- colorscheme
 vim.cmd([[

@@ -1,5 +1,6 @@
 local async = require "plenary.async"
 
+-- Config'==>
 require('telescope').setup{
   defaults = {
     vimgrep_arguments = {
@@ -41,5 +42,20 @@ require('telescope').setup{
 
     -- Developer configurations: Not meant for general override
     buffer_previewer_maker = require'telescope.previewers'.buffer_previewer_maker
+  },
+  pickers = {
+      man_pages = {
+          sections = { '1', '2', '3' },
+      },
   }
 }
+-- <=='
+
+-- Mappings
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<leader>tc', builtin.builtin, {})
+vim.keymap.set('n', '<leader>tf', builtin.find_files, {})
+vim.keymap.set('n', '<leader>tm', builtin.man_pages, {})
+vim.keymap.set('n', '<leader>td', builtin.diagnostics, {})
+vim.keymap.set('n', '<leader>tr', builtin.registers, {})
+

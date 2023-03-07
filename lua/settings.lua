@@ -6,6 +6,7 @@ set nocompatible
 filetype plugin indent on
 
 syntax on
+let mapleader=","
 
 set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx,*.o,*.gch
 let NvimTreeIgnore = ['\.o$', '\.gch$', '\.elf', '\.smdh']
@@ -27,7 +28,7 @@ vim.o.tabstop = 4
 vim.o.shiftwidth = 4
 vim.o.expandtab = true
 
--- -- doxygen
+-- doxygen
 vim.g.load_doxygen_syntax = true
 
 -- no perl

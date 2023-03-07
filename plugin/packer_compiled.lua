@@ -104,11 +104,6 @@ _G.packer_plugins = {
     path = "/home/luengor/.local/share/nvim/site/pack/packer/start/lazygit.nvim",
     url = "https://github.com/kdheepak/lazygit.nvim"
   },
-  ["lspsaga.nvim"] = {
-    loaded = true,
-    path = "/home/luengor/.local/share/nvim/site/pack/packer/start/lspsaga.nvim",
-    url = "https://github.com/glepnir/lspsaga.nvim"
-  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/home/luengor/.local/share/nvim/site/pack/packer/start/lualine.nvim",
