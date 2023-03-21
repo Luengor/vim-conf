@@ -13,6 +13,10 @@ require('lsp-config')
 -- telescope
 require('telescope-config')
 
+-- Markdown
+vim.g.mkdp_page_title = ' ${name} '
+--vim.g.mkdp_markdown_css = '/home/luengor/.config/nvim/markdown.css' 
+
 -- nerdcommenter
 vim.api.nvim_set_keymap('n', '++', '<Plug>NERDCommenterToggle', { noremap = false, silent = true })
 vim.api.nvim_set_keymap('v', '++', '<Plug>NERDCommenterToggle', { noremap = false, silent = true })
