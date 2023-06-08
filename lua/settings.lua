@@ -38,7 +38,7 @@ vim.g.loaded_perl_provider = false
 vim.g.loaded_ruby_provider = false
 
 -- python3
-vim.g.python3_host_prog = '/usr/bin/python3.10'
+vim.g.python3_host_prog = '/home/tino/.config/nvim/vimvenv/bin/python3.11'
 vim.g.pyhton_highlight_space_errors = false
 
 -- whatever this is (is for tree-nvim)
