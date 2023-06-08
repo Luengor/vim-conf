@@ -2,5 +2,5 @@
 vimvenv
 
 # Ignore plugin folder 
-plugin/*
+plugin
 
