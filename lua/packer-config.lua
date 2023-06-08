@@ -19,7 +19,8 @@ require('packer').startup(function(use)
     use 'nvim-treesitter/nvim-treesitter'
 
     -- tmux like navigation
-    use 'christoomey/vim-tmux-navigator'
+    --use 'christoomey/vim-tmux-navigator'
+    use 'knubie/vim-kitty-navigator'
 
     -- copilot
     use 'github/copilot.vim'
