@@ -1,2 +1,6 @@
 # Ignore env
 vimvenv
+
+# Ignore plugin folder 
+plugin/*
+
