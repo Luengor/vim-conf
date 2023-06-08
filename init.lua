@@ -27,6 +27,11 @@ vim.cmd([[
   set background=dark
 ]])
 
+-- vim-glsl
+vim.cmd([[
+    autocmd! BufNewFile,BufRead *.vs,*.fs,*.frag,*vert set ft=glsl
+]])
+
 -- treesitter
 require'nvim-treesitter.configs'.setup {
     ensure_installed = { "c", "python" },
