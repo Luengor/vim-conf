@@ -31,6 +31,10 @@ require('packer').startup(function(use)
     -- every language server
     use 'sheerun/vim-polyglot'
 
+    -- coq
+    use {'ms-jpq/coq_nvim', branch = 'coq'}
+    use {'ms-jpq/coq.artifacts', branch = 'artifacts'}
+
     -- move lines
     use 'fedepujol/move.nvim'
 
@@ -44,10 +48,6 @@ require('packer').startup(function(use)
 
     -- lsp stuff 
     use 'neovim/nvim-lspconfig'
-    use 'hrsh7th/nvim-cmp' -- Autocompletion plugin
-    use 'hrsh7th/cmp-nvim-lsp' -- LSP source for nvim-cmp
-    use 'saadparwaiz1/cmp_luasnip' -- Snippets source for nvim-cmp
-    use 'L3MON4D3/LuaSnip' -- Snippets plugin
 
     use({
         "iamcco/markdown-preview.nvim",
