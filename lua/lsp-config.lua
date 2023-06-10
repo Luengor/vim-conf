@@ -31,7 +31,7 @@ vim.diagnostic.config({
 })
 
 -- coq
-vim.g.coq_settings =  { auto_start = 'shut-up' }
+vim.g.coq_settings =  { auto_start = 'shut-up', ['keymap.jump_to_mark'] = '<c-y>' }
 local coq = require('coq')
 
 -- Configure servers
