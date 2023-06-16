@@ -7,7 +7,7 @@ require("packer-config")
 -- nvim-tree
 require('tree-config')
 
--- lsp/cmp-config 
+-- lsp/coq-config 
 require('lsp-config')
 
 -- telescope
