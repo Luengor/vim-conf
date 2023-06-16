@@ -34,6 +34,7 @@ require('packer').startup(function(use)
     -- coq
     use {'ms-jpq/coq_nvim', branch = 'coq'}
     use {'ms-jpq/coq.artifacts', branch = 'artifacts'}
+    use {'ms-jpq/coq.thirdparty'}
 
     -- move lines
     use 'fedepujol/move.nvim'

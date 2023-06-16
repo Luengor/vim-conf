@@ -42,3 +42,9 @@ for _, lsp in ipairs(servers) do
     }))
 end
 
+-- third party custom coq sources
+require("coq_3p") {
+    { src = "bc", short_name = "MATH", precision = 6 },
+    { src = "figlet", short_name = "BIG" }
+}
+
