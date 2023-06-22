@@ -35,7 +35,7 @@ vim.g.coq_settings =  { auto_start = 'shut-up', ['keymap.jump_to_mark'] = '<c-y>
 local coq = require('coq')
 
 -- Configure servers
-local servers = { 'clangd', 'pyright' }
+local servers = { 'clangd', 'pyright', 'tsserver', 'jsonls', 'eslint' }
 for _, lsp in ipairs(servers) do
     lspconfig[lsp].setup(coq.lsp_ensure_capabilities({
         on_atach = on_attach,
