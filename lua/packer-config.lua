@@ -3,7 +3,16 @@ require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
     -- colorscheme
-    use {"catppuccin/nvim", as = "catppuccin" }
+    use {
+        "catppuccin/nvim",
+        as = "catppuccin",
+        config = function()
+            vim.cmd([[
+                colorscheme catppuccin
+                set background=dark
+            ]])
+        end
+    }
 
     -- treesitter
     use {
