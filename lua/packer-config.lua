@@ -32,6 +32,10 @@ require('packer').startup(function(use)
             "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
             "MunifTanjim/nui.nvim",
         },
+        config = function()
+            -- Open tree with <C-n>
+            vim.api.nvim_set_keymap('n', '<C-n>', ':Neotree toggle<CR>', { noremap = true, silent = true })
+        end
     }
 
     -- harpoon
