@@ -43,7 +43,14 @@ require('packer').startup(function(use)
         "ThePrimeagen/harpoon",
         requires = {
             "nvim-lua/plenary.nvim"
-        }
+        },
+        config = function() 
+            -- Keymaps
+            vim.keymap.set('n', '<leader>h', require("harpoon.ui").toggle_quick_menu) 
+            vim.keymap.set('n', '<leader>k', require("harpoon.ui").nav_prev) 
+            vim.keymap.set('n', '<leader>j', require("harpoon.ui").nav_next) 
+            vim.keymap.set('n', '<leader>l', require("harpoon.mark").add_file) 
+        end
     }
 
     -- tmux moving
