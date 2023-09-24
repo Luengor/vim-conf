@@ -38,6 +38,25 @@ require('packer').startup(function(use)
         end
     }
 
+    -- lualine
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true },
+        config = function() 
+            require('lualine').setup {
+                sections = {
+                    lualine_a = {'hostname', 'mode'},
+                    lualine_b = {'branch', 'diff'},
+                    lualine_c = {'diagnostics'},
+                    lualine_x = {'searchcount'},
+                    lualine_y = {'fileformat', 'encoding', 'filesize'},
+                    lualine_z = {'filename', 'filetype'}
+                }
+            }
+
+        end
+    }
+
     -- harpoon
     use {
         "ThePrimeagen/harpoon",
