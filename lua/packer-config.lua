@@ -22,6 +22,7 @@ require('packer').startup(function(use)
             ts_update()
         end,
     }
+    use "nvim-treesitter/nvim-treesitter-textobjects"
 
     -- nvim-neo-tree
     use {
@@ -97,6 +98,11 @@ require('packer').startup(function(use)
     use 'hrsh7th/cmp-path'
     use 'hrsh7th/cmp-cmdline'
     use 'hrsh7th/nvim-cmp'
+
     use 'saadparwaiz1/cmp_luasnip'
+    use 'delphinus/cmp-ctags'
+    use 'hrsh7th/cmp-emoji'
+    use 'chrisgrieser/cmp-nerdfont'
+    use 'paopaol/cmp-doxygen'
 
 end)

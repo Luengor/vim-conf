@@ -12,7 +12,11 @@ cmp.setup({
     -- Set sources
     sources = cmp.config.sources({
         { name = 'nvim_lsp' },
+        { name = 'ctags', trigger_characters = { ".", "->" } },
         { name = 'luasnip' },
+        { name = 'nerdfont' },
+        { name = 'emoji' },
+        { name = 'doxygen' }
     }, {
         { name = 'buffer' },
     }),
