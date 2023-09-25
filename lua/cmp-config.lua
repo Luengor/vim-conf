@@ -17,7 +17,8 @@ cmp.setup({
         { name = 'luasnip' },
         { name = 'nerdfont' },
         { name = 'emoji' },
-        { name = 'doxygen' }
+        { name = 'doxygen' },
+        { name = 'calc' }
     }, {
         { name = 'buffer' },
     }),
@@ -42,6 +43,7 @@ cmp.setup({
                 nerdfont = "[nerd]",
                 emoji = "[emoji]",
                 doxygen = "[doxygen]",
+                calc = "[☝️ 🤓]",
                 buffer = "[buffer]",
             })
         }),

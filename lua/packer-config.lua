@@ -122,5 +122,5 @@ require('packer').startup(function(use)
     use 'hrsh7th/cmp-emoji'
     use 'chrisgrieser/cmp-nerdfont'
     use 'paopaol/cmp-doxygen'
-
+    use 'hrsh7th/cmp-calc'
 end)
