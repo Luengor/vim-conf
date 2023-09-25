@@ -10,5 +10,8 @@ require("treesitter-config")
 -- cmp/lsp config
 require("cmp-config")
 
+-- telescope config
+require("telescope-config")
+
 -- Other things
 

@@ -93,6 +93,16 @@ require('packer').startup(function(use)
         end
     }
 
+    -- telescope
+    use {
+        'nvim-telescope/telescope.nvim',
+        tag = '0.1.3',
+        requires = {
+            'nvim-lua/plenary.nvim',
+            'BurntSushi/ripgrep',
+        },
+    }
+
     -- lspconfig
     use 'neovim/nvim-lspconfig'
     
