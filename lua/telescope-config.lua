@@ -17,8 +17,8 @@ map('n', '<leader>tm', telescope.man_pages, {})
 map('n', '<leader>td', telescope.diagnostics, {})
 -- Telescope Emoji (emoji + nerdfont) 
 map('n', '<leader>te', telescope.symbols, {})
--- Telescope workspace Symbols
-map('n', '<leader>ts', telescope.lsp_workspace_symbols, {})
+-- Telescope document Symbols
+map('n', '<leader>ts', telescope.lsp_document_symbols, {})
 
 -- Telescope Harpoon
 vim.api.nvim_set_keymap('n', '<leader>th', ':Telescope harpoon marks<CR>', { noremap = true, silent = true })
