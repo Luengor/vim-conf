@@ -1,4 +1,5 @@
 local cmp = require('cmp')
+local lspkind = require('lspkind')
 
 -- Setup cmp
 cmp.setup({
@@ -29,6 +30,22 @@ cmp.setup({
       ['<C-e>'] = cmp.mapping.abort(),
       ['<CR>'] = cmp.mapping.confirm({ select = true }),
     }),
+
+    -- ✨ pretty please ✨
+    formatting = {
+        format = lspkind.cmp_format({
+            mode = "symbol_text",
+            menu = ({
+                nvim_lsp = "[LSP]",
+                ctags = "[ctags]",
+                luasnip = "[luaSnip]",
+                nerdfont = "[nerd]",
+                emoji = "[emoji]",
+                doxygen = "[doxygen]",
+                buffer = "[buffer]",
+            })
+        }),
+    },
 })
 
 -- Setup lspconfig

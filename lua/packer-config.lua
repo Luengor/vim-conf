@@ -116,6 +116,7 @@ require('packer').startup(function(use)
     use 'hrsh7th/cmp-cmdline'
     use 'hrsh7th/nvim-cmp'
 
+    use 'onsails/lspkind.nvim'
     use 'saadparwaiz1/cmp_luasnip'
     use 'delphinus/cmp-ctags'
     use 'hrsh7th/cmp-emoji'
