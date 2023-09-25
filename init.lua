@@ -13,5 +13,8 @@ require("cmp-config")
 -- telescope config
 require("telescope-config")
 
+-- lsp_signature config
+require("lsp_signature-config")
+
 -- Other things
 

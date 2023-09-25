@@ -107,6 +107,9 @@ require('packer').startup(function(use)
     -- lspconfig
     use 'neovim/nvim-lspconfig'
     
+    -- lsp signatures
+    use "ray-x/lsp_signature.nvim"
+
     -- luasnip
     use 'L3MON4D3/LuaSnip'
 
@@ -124,4 +127,5 @@ require('packer').startup(function(use)
     use 'chrisgrieser/cmp-nerdfont'
     use 'paopaol/cmp-doxygen'
     use 'hrsh7th/cmp-calc'
+
 end)
