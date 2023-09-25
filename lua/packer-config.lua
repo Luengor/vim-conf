@@ -86,6 +86,13 @@ require('packer').startup(function(use)
         end
     }
 
+    -- gitgutter
+    use {
+        'airblade/vim-gitgutter',
+        setup = function()
+        end
+    }
+
     -- lspconfig
     use 'neovim/nvim-lspconfig'
     

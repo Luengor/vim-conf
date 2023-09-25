@@ -8,6 +8,7 @@ vim.cmd([[
     let mapleader=","
     
     set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx,*.o,*.gch
+    let updatetime=300
 ]])
 
 vim.o.encoding = "utf-8"
