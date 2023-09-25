@@ -1,13 +1,13 @@
 HOME = os.getenv('HOME')
 
 vim.cmd([[
-set nocompatible
-filetype plugin indent on
-
-syntax on
-let mapleader=","
-
-set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx,*.o,*.gch
+    set nocompatible
+    filetype plugin indent on
+    
+    syntax on
+    let mapleader=","
+    
+    set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx,*.o,*.gch
 ]])
 
 vim.o.encoding = "utf-8"
