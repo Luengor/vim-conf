@@ -102,6 +102,7 @@ require('packer').startup(function(use)
             'BurntSushi/ripgrep',
         },
     }
+    use 'nvim-telescope/telescope-symbols.nvim'
 
     -- lspconfig
     use 'neovim/nvim-lspconfig'
