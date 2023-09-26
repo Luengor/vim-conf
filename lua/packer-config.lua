@@ -50,8 +50,8 @@ require('packer').startup(function(use)
                     lualine_b = {'branch', 'diff'},
                     lualine_c = {'diagnostics'},
                     lualine_x = {'searchcount'},
-                    lualine_y = {'fileformat', 'encoding', 'filesize'},
-                    lualine_z = {'filename', 'filetype'}
+                    lualine_y = {'filetype'},
+                    lualine_z = {'location'}
                 }
             }
 
