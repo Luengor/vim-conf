@@ -113,19 +113,29 @@ require('packer').startup(function(use)
     -- luasnip
     use 'L3MON4D3/LuaSnip'
 
-    -- cmp
-    use 'hrsh7th/cmp-nvim-lsp'
-    use 'hrsh7th/cmp-buffer'
-    use 'hrsh7th/cmp-path'
-    use 'hrsh7th/cmp-cmdline'
-    use 'hrsh7th/nvim-cmp'
-
+    -- pictograms to lsp 
     use 'onsails/lspkind.nvim'
-    use 'saadparwaiz1/cmp_luasnip'
-    use 'delphinus/cmp-ctags'
-    use 'hrsh7th/cmp-emoji'
-    use 'chrisgrieser/cmp-nerdfont'
-    use 'paopaol/cmp-doxygen'
-    use 'hrsh7th/cmp-calc'
+
+    -- coq
+    use 'ms-jpq/coq_nvim'
+    use 'ms-jpq/coq.artifacts'
+    use 'ms-jpq/coq.thirdparty'
+
+    -- clang
+    use 'p00f/clangd_extensions.nvim'
+
+    -- cmp
+    -- use 'hrsh7th/cmp-nvim-lsp'
+    -- use 'hrsh7th/cmp-buffer'
+    -- use 'hrsh7th/cmp-path'
+    -- use 'hrsh7th/cmp-cmdline'
+    -- use 'hrsh7th/nvim-cmp'
+
+    -- use 'saadparwaiz1/cmp_luasnip'
+    -- use 'delphinus/cmp-ctags'
+    -- use 'hrsh7th/cmp-emoji'
+    -- use 'chrisgrieser/cmp-nerdfont'
+    -- use 'paopaol/cmp-doxygen'
+    -- use 'hrsh7th/cmp-calc'
 
 end)
