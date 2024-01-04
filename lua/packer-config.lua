@@ -113,8 +113,12 @@ require('packer').startup(function(use)
     -- luasnip
     use 'L3MON4D3/LuaSnip'
 
-    -- pictograms to lsp 
+    -- pictograms for lsp 
     use 'onsails/lspkind.nvim'
+
+    -- mason and mason lsp
+    use 'williamboman/mason.nvim'
+    use 'williamboman/mason-lspconfig.nvim'
 
     -- coq
     use 'ms-jpq/coq_nvim'

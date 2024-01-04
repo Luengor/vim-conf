@@ -7,6 +7,9 @@ require("packer-config")
 -- treesitter config
 require("treesitter-config")
 
+-- mason
+require("mason-config")
+
 -- coq/lsp config
 require("coq-config")
 
