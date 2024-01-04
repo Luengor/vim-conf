@@ -1,6 +1,16 @@
+-- lspconfig
 local lspconfig = require('lspconfig')
 
--- coq settings BEFORE require('coq') 
+-- Keymaps 
+vim.keymap.set('n', '<space>d', vim.diagnostic.open_float)
+vim.keymap.set('n', '<space>D', vim.lsp.buf.definition)
+vim.keymap.set('n', '<space>h', vim.lsp.buf.hover)
+vim.keymap.set('n', '<space>r', vim.lsp.buf.references)
+-- vim.keymap.set('n', '<space>s', vim.lsp.buf.signature_help)
+
+
+-- coq
+-- settings BEFORE require('coq') 
 -- (or auto_start won't work)
 vim.g.coq_settings = {
     auto_start = 'shut-up',
@@ -8,11 +18,11 @@ vim.g.coq_settings = {
     ["limits.completion_manual_timeout"] = 1,
 }
 
--- coq
 local coq = require('coq')
 
+
 -- Servers
-local servers = { 'clangd', 'pyright', 'eslint', 'html', 'cssls', 'lua_ls' }
+local servers = { 'clangd', 'pyright', 'eslint', 'html', 'cssls'}
 for _, lsp in ipairs(servers) do
     lspconfig[lsp].setup(coq.lsp_ensure_capabilities({}))
 end
