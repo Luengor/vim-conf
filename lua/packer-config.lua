@@ -104,8 +104,12 @@ require('packer').startup(function(use)
     }
     use 'nvim-telescope/telescope-symbols.nvim'
 
-    -- lspconfig
+    -- mason
+    use 'williamboman/mason.nvim'
+
+    -- lspconfig (and mason)
     use 'neovim/nvim-lspconfig'
+    use 'williamboman/mason-lspconfig.nvim'
     
     -- lsp signatures
     use "ray-x/lsp_signature.nvim"
@@ -116,10 +120,6 @@ require('packer').startup(function(use)
     -- pictograms for lsp 
     use 'onsails/lspkind.nvim'
 
-    -- mason and mason lsp
-    use 'williamboman/mason.nvim'
-    use 'williamboman/mason-lspconfig.nvim'
-
     -- coq
     use 'ms-jpq/coq_nvim'
     use 'ms-jpq/coq.artifacts'
@@ -127,6 +127,10 @@ require('packer').startup(function(use)
 
     -- clang
     use 'p00f/clangd_extensions.nvim'
+
+    -- dap (and mason)
+    use 'mfussenegger/nvim-dap'
+    use 'jay-babu/mason-nvim-dap.nvim'
 
     -- cmp
     -- use 'hrsh7th/cmp-nvim-lsp'

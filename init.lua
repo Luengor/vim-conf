@@ -19,5 +19,8 @@ require("telescope-config")
 -- lsp_signature config
 require("lsp_signature-config")
 
+-- dap config
+require("dap-config")
+
 -- Other things
 

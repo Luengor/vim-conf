@@ -22,7 +22,7 @@ local coq = require('coq')
 
 
 -- Servers
-local servers = { 'clangd', 'pyright', 'eslint', 'html', 'cssls'}
+local servers = { 'clangd', 'pyright', 'eslint', 'html', 'cssls', 'cmake', 'arduino_language_server'}
 for _, lsp in ipairs(servers) do
     lspconfig[lsp].setup(coq.lsp_ensure_capabilities({}))
 end
